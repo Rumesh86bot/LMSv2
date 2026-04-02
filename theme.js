@@ -1,0 +1,6 @@
+if(!window.savedStore) {
+  window.savedStore = {}
+}
+
+
+window.savedStore.theme = {"backgroundColor":"#ffffff","buttonBackgroundColor":"#060709","buttonBorderRadius":0,"buttonOutline":false,"buttonShadow":false,"buttonShape":"pill","useLargeButton":false,"buttonTextColor":"#ffffff","buttonHover":"","fontFamilies":[],"fontFamily":"","fontSizes":{"Large screen":16,"Medium screen":16,"Small screen":16},"loadingSpinnerColor":"#cea5f9","buttons":{"main":{"backgroundColor":"#060709","borderRadius":0,"outline":false,"shadow":false,"shape":"pill","useLargeButton":false,"textColor":"#ffffff"}},"highContrast":false,"recoloredChameleonImages":{},"textColor":"#060709","useImagePreloader":true,"enableBookmarking":true,"moduleIsFreeScrolling":{"desktop":false,"device":false},"giveFocusToFirstSectionOnLoad":true,"textToSpeech":false,"textToSpeechVoice":"","disableLockDownInPreview":false,"userPalette":["#0275b5"],"menu":{"Menu background colour":"#ffffff","Menu text and close colour":"#000000","Menu text hover colour":"#0000ff","Menu text active colour":"#ff0000"},"headings":{"h1":1,"h2":1,"h3":1,"h4":1,"h5":1,"h6":1},"links":{"link":"#0000ff","visited":"#800080","hover":"#0000ff","focus":"#e59700","active":"#ff0000"},"linksSecondary":{"link":"#0000ff","visited":"#800080","hover":"#0000ff","focus":"#e59700","active":"#ff0000"}};
