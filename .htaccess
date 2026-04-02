@@ -1,0 +1,12 @@
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    
+    # Redirect lowercase 'images/' to uppercase 'Images/'
+    RewriteCond %{REQUEST_URI} ^/images/ [NC]
+    RewriteRule ^images/(.*)$ Images/$1 [R=301,L]
+    
+    # Also handle relative paths in case of subdirectories
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteRule ^images/(.*)$ Images/$1 [R=301,L]
+</IfModule>
