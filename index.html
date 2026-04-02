@@ -4,6 +4,31 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    
+    <!-- Runtime Image Path Fixer -->
+    <script>
+        // Fix lowercase 'images/' paths to uppercase 'Images/'
+        (function() {
+            // Fix existing img tags
+            document.addEventListener('DOMContentLoaded', function() {
+                document.querySelectorAll('img').forEach(function(img) {
+                    const src = img.getAttribute('src');
+                    if (src && src.includes('images/')) {
+                        img.setAttribute('src', src.replace(/images\//gi, 'Images/'));
+                    }
+                });
+            });
+            
+            // Fix dynamically added images
+            const originalSetAttribute = Element.prototype.setAttribute;
+            Element.prototype.setAttribute = function(name, value) {
+                if (name === 'src' && typeof value === 'string' && value.includes('images/')) {
+                    value = value.replace(/images\//gi, 'Images/');
+                }
+                originalSetAttribute.call(this, name, value);
+            };
+        })();
+    </script>
 </head>
 <body>
     <!-- Some content -->
